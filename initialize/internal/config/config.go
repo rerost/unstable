@@ -3,12 +3,8 @@ package config
 import (
 	"encoding/json"
 
-	api_pb "github.com/rerost/unstable/init/internal/proto"
+	api_pb "github.com/rerost/unstable/initialize/internal/proto"
 	"github.com/srvc/fail"
-)
-
-const (
-	FileName = "unstable.json"
 )
 
 func LoadConfig(configJSON []byte) (*api_pb.Config, error) {
