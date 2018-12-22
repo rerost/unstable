@@ -1,3 +1,3 @@
 .PHONY: protoc
 protoc: 
-	protoc --proto_path=./init/proto --go_out=./init/proto ./init/proto/config.proto
+	protoc --proto_path=./common/internal/proto --go_out=./common/internal/proto ./common/internal/proto/config.proto
