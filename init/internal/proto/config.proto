@@ -1,0 +1,18 @@
+syntax = "proto3";
+package com.github.rerost.unstable;
+
+message Config {
+  int64 interval = 1; // Second
+  bool server_error = 2;
+  SlowResponseOption slow_response_option = 3;
+  ServerErrorOption server_error_option = 4;
+}
+
+message SlowResponseOption {
+  bool enable = 1;
+  int64 time = 2;
+}
+
+message ServerErrorOption {
+  bool enable = 1;
+}
