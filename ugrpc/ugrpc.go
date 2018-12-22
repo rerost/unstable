@@ -14,10 +14,10 @@ func init() {
 	common.Init()
 }
 
-func WithUnaryServerUnstable() grpc.UnaryServerInterceptor {
+func UnstableUnaryServerInterceptor() grpc.UnaryServerInterceptor {
 	return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
 		cfg := common.Config
-		if cfg.Interval != 0 && int64(time.Now().Second())%cfg.Interval == 0 {
+		if cfg.Interval != 0 && uint64(time.Now().Second())%cfg.Interval == 0 {
 			if cfg.SlowResponseOption.GetEnable() {
 				time.Sleep(time.Duration(cfg.SlowResponseOption.GetTime()))
 			}
