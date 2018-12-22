@@ -3,7 +3,7 @@ package config
 import (
 	"encoding/json"
 
-	api_pb "github.com/rerost/unstable/initialize/internal/proto"
+	api_pb "github.com/rerost/unstable/common/internal/proto"
 	"github.com/srvc/fail"
 )
 

@@ -1,18 +1,18 @@
-package init
+package common
 
 import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/rerost/unstable/initialize/internal/config"
-	api_pb "github.com/rerost/unstable/initialize/internal/proto"
+	"github.com/rerost/unstable/common/internal/config"
+	api_pb "github.com/rerost/unstable/common/internal/proto"
 )
 
 const (
 	ConfigFileName = "unstable.json"
 )
 
-var Cfg api_pb.Config
+var Config api_pb.Config
 
 func Init() {
 	f, err := ioutil.ReadFile(ConfigFileName)
@@ -29,5 +29,5 @@ func Init() {
 		panic(fmt.Errorf("Failed to open config"))
 	}
 
-	Cfg = *cfg
+	Config = *cfg
 }
