@@ -1,4 +1,4 @@
-package shttp
+package uhttp
 
 import (
 	"net/http"
@@ -14,7 +14,7 @@ func init() {
 func WithUnstable(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		cfg := common.Config
-		if cfg.Interval != 0 && int64(time.Now().Second())%cfg.Interval == 0 {
+		if cfg.Interval != 0 && uint64(time.Now().Second())%cfg.Interval == 0 {
 			if cfg.SlowResponseOption.GetEnable() {
 				time.Sleep(time.Duration(cfg.SlowResponseOption.GetTime()))
 			}
