@@ -1,0 +1,12 @@
+syntax = "proto3";
+package com.github.rerost.unstable.example.api;
+
+import "google/protobuf/empty.proto";
+
+service SampleService {
+  rpc GetSample (google.protobuf.Empty) returns (GetSampleResponse) {}
+}
+
+message GetSampleResponse {
+  string message = 1;
+}
