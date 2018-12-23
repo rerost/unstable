@@ -1,0 +1,10 @@
+{
+  "interval": 1,
+  "slow_response_option": {
+    "enable": true,
+    "time": 5
+  },
+  "server_error_option": {
+    "enable": true
+  }
+}
