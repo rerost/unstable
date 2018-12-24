@@ -9,4 +9,4 @@ jobs:
     working_directory: /go/src/github.com/rerost/unstable
     steps:
       - checkout
-      - make test
+      - run: make test
