@@ -1,4 +1,6 @@
 # unstable
+[![CircleCI](https://circleci.com/gh/rerost/unstable/tree/master.svg?style=svg)](https://circleci.com/gh/rerost/unstable/tree/master)
+
 Make unstable http/gRPC server
 
 ## What's unstable
