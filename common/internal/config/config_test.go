@@ -3,7 +3,7 @@ package config_test
 import (
 	"testing"
 
-	"github.com/rerost/unstable/initialize/internal/config"
+	"github.com/rerost/unstable/common/internal/config"
 )
 
 func TestLoadConfig(t *testing.T) {
