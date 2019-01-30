@@ -2,7 +2,7 @@
   "interval": 1,
   "slow_response_option": {
     "enable": true,
-    "time": 5
+    "time": 500
   },
   "server_error_option": {
     "enable": true
