@@ -19,7 +19,7 @@ Like,
   "interval": 1,
   "slow_response_option": {
     "enable": true,
-    "time": 5
+    "time": 500
   },
   "server_error_option": {
     "enable": true
@@ -30,7 +30,7 @@ Like,
 - `interval`(seconds): When the unix time(sencods) is be divisable by `interval`, then return `slow response` or `server error`. When `0`, then disable this package.
 - `slow_response_option`: Control repsonse time.
   - `enable`: When true, then response time will take more than `time`
-  - `time`(seconds): Response time will take more than `time`
+  - `time`(milliseconds): Response time will take more than `time`
 - `server_error_option`: Control server error.
   - `enable`: When true, then return server error
   
