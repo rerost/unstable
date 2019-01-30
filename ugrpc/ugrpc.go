@@ -19,7 +19,7 @@ func UnstableUnaryServerInterceptor() grpc.UnaryServerInterceptor {
 		cfg := common.Config
 		if cfg.Interval != 0 && uint64(time.Now().Second())%cfg.Interval == 0 {
 			if cfg.SlowResponseOption.GetEnable() {
-				time.Sleep(time.Duration(cfg.SlowResponseOption.GetTime()))
+				time.Sleep(time.Duration(cfg.SlowResponseOption.GetTime() * 1000000))
 			}
 			if cfg.ServerErrorOption.GetEnable() {
 				return nil, status.Error(codes.Internal, "Fail by unstable")
